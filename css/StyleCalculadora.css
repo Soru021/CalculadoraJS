@@ -1,0 +1,31 @@
+.Calculadora{
+    background-color: rgba(142, 68, 173, 1);
+}
+
+.Calculadora .Fondo{
+    background-color: rgba(191, 85, 236, 0.5);
+    padding: 10px;
+    width: 40vh;
+    height: 30vh;
+}
+
+.Calculadora .Display{
+    background-color: white;
+    width: 37vh;
+    height: 5vh;
+    margin: 1vh;
+    border-radius: 40px;
+    border: 2px solid black;
+    outline: none;
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.Calculadora .Teclado{
+    background-color: gray;
+    margin: 1vh;
+    height: 20vh;
+    width: auto;
+}
+
