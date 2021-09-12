@@ -1,6 +1,6 @@
 class Operaciones{
 
-    constructor(valor1,valor2,...otrosValores){
+    constructor(valor1=0,valor2=0,...otrosValores){
         this.valor1=valor1;
         this.valor2=valor2;
         this.otrosValores=otrosValores;
@@ -10,7 +10,7 @@ class Operaciones{
 
         let resultado=parseFloat(this.valor1) + parseFloat(this.valor2); 
     
-        otrosValores.forEach((elementos)=>{
+        this.otrosValores.forEach((elementos)=>{
             resultado += parseFloat(this.otrosValores);
         });
     
@@ -20,7 +20,7 @@ class Operaciones{
     Resta(){
         let resultado = parseFloat(this.valor1) - parseFloat(this.valor2); 
     
-        otrosValores.forEach((elementos)=>{
+        this.otrosValores.forEach((elementos)=>{
             resultado -= parseFloat(this.otrosValores);
         });
     
@@ -30,7 +30,7 @@ class Operaciones{
     Multiplicacion(){
         let resultado=parseFloat(this.valor1) * parseFloat(this.valor2); 
     
-        otrosValores.forEach((elementos)=>{
+        this.otrosValores.forEach((elementos)=>{
             resultado *= parseFloat(this.otrosValores);
         });
     
@@ -38,12 +38,16 @@ class Operaciones{
     }
     
     Division(){
-    
         let resultado=parseFloat(this.valor1) / parseFloat(this.valor2); 
-    
-        otrosValores.forEach(()=>{
-            resultado /= parseFloat(this.otrosValores);
-        });
+
+        if (this.valor2 != 0){
+
+            this.otrosValores.forEach(()=>{
+                resultado /= parseFloat(this.otrosValores);
+            });
+            
+        }else resultado=0
+
     
      return resultado;
     
@@ -55,7 +59,7 @@ class Operaciones{
     
     }
     
-    Porcientos(valor1=0,valor2=0){
+    Porcientos(){
     
         return parseFloat(this.valor1) * (parseInt(this.valor2) / 100);
     

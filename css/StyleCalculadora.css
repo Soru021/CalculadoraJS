@@ -8,7 +8,7 @@
     position: absolute;
     background-color: rgba(191, 85, 236, 0.5);
     padding: 10px;
-    width: 64vh;
+    width: 59vh;
     height: auto;
 }
 
@@ -17,7 +17,7 @@
 .Calculadora .Fondo .Display{
     position: relative;
     background-color: white;
-    width: 40vh;
+    width: 53vh;
     height: 5vh;
     margin: 1vh;
     border-radius: 10px;
@@ -34,7 +34,7 @@
     background-color:rgba(159, 90, 253, 0.5);
     margin: 1vh;
     height: auto;
-    width: 41vh;
+    width: 54vh;
     float: left;
     border-radius: 40px;
 }
