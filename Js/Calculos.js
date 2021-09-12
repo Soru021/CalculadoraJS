@@ -1,5 +1,6 @@
 class Operaciones{
 
+    
     constructor(valor1=0,valor2=0,...otrosValores){
         this.valor1=valor1;
         this.valor2=valor2;

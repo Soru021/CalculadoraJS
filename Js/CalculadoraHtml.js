@@ -3,21 +3,25 @@ let ope='';
 const pi=3.1415926535897932384626433832795;
 const e=2.7182818284590452353602874713527;
 
-
 function Clear(){
   let boton=document.getElementById('_display');
   boton.value='';
   boton.focus();
 }
 
-function ObtenerValor(e){
+function ObtenerValor(elementos){
 
-    let display = document.getElementById('_display').value;
+    let display = document.getElementById('_display');
 
-    if ( !Number.parseFloat(e.value))
-        ope=e.value;
+    if ( !Number.parseFloat(elementos.value))
+        ope=elementos.value;
 
-    document.getElementById('_display').value +=e.value;
+        if (elementos.value==='pi')
+        elementos.value=pi;
+        else if(elementos.value==='e')
+        elementos.value=e;
+
+        display.value +=elementos.value;
 }
 
 function Resultado(){
