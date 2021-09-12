@@ -1,0 +1,15 @@
+.Botones{
+    width: 9vh;
+    height: 9vh;
+    margin: 2vh;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    border: 2px solid black;
+    background-image: radial-gradient(circle at 29.74% 6.56%, #ffdcf5 0, #ffcfef 16.67%, #ffbde6 33.33%, #f3a7d9 50%, #dc92cd 66.67%, #c882c6 83.33%, #b679c3 100%);
+}
+
+.Botones:hover{
+    background-color: rgba(174, 168, 211, 1);
+}

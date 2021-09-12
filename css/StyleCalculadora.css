@@ -1,20 +1,26 @@
+@import url(Componentes.css);
+
 .Calculadora{
     background-color: rgba(142, 68, 173, 1);
 }
 
 .Calculadora .Fondo{
+    position: absolute;
     background-color: rgba(191, 85, 236, 0.5);
     padding: 10px;
-    width: 40vh;
-    height: 30vh;
+    width: 64vh;
+    height: auto;
 }
 
-.Calculadora .Display{
+
+
+.Calculadora .Fondo .Display{
+    position: relative;
     background-color: white;
-    width: 37vh;
+    width: 40vh;
     height: 5vh;
     margin: 1vh;
-    border-radius: 40px;
+    border-radius: 10px;
     border: 2px solid black;
     outline: none;
     text-align: right;
@@ -22,10 +28,22 @@
     font-weight: bold;
 }
 
-.Calculadora .Teclado{
-    background-color: gray;
+
+.Calculadora .Fondo .Boton{
+    position: relative;
+    background-color:rgba(159, 90, 253, 0.5);
     margin: 1vh;
-    height: 20vh;
-    width: auto;
+    height: auto;
+    width: 41vh;
+    float: left;
+    border-radius: 40px;
 }
 
+.Calculadora .Fondo .Operadores{
+    position: relative;
+    background: transparent;
+    float: right;
+    width: 12vh;
+    height: auto;
+    margin: 1vh;
+}

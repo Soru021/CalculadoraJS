@@ -1,54 +1,63 @@
-function Suma(valor1=0, valor2=0, ...otrosValores){
+class Operaciones{
 
-    let resultado=parseFloat(valor1) + parseFloat(valor2); 
+    constructor(valor1,valor2,...otrosValores){
+        this.valor1=valor1;
+        this.valor2=valor2;
+        this.otrosValores=otrosValores;
+    }
 
-    otrosValores.forEach((elementos)=>{
-        resultado += parseFloat(otrosValores);
-    });
+    Suma(){
 
-    return resultado;
-}
-
-function Resta(valor1=0, valor2=0, ...otrosValores){
-    let resultado = parseFloat(valor1) - parseFloat(valor2); 
-
-    otrosValores.forEach((elementos)=>{
-        resultado -= parseFloat(otrosValores);
-    });
-
-    return resultado;
-}
-
-function Multiplicacion(valor1=0,valor2=0, ...otrosValores){
-    let resultado=parseFloat(valor1) * parseFloat(valor2); 
-
-    otrosValores.forEach((elementos)=>{
-        resultado *= parseFloat(otrosValores);
-    });
-
-    return resultado;
-}
-
-function Division(valor1=0,valor2=0,...otrosValores){
-
-    let resultado=parseFloat(valor1) / parseFloat(valor2); 
-
-    otrosValores.forEach(()=>{
-        resultado /= parseFloat(otrosValores);
-    });
-
- return resultado;
-
-}
-
-function Modulo(valor1=0,valor2=0){
-
-    return parseFloat(valor1) % parseFloat(valor2);
-
-}
-
-function Porcientos(valor1=0,valor2=0){
-
-    return parseFloat(valor1) * (parseInt(valor2) / 100);
-
+        let resultado=parseFloat(this.valor1) + parseFloat(this.valor2); 
+    
+        otrosValores.forEach((elementos)=>{
+            resultado += parseFloat(this.otrosValores);
+        });
+    
+        return resultado;
+    }
+    
+    Resta(){
+        let resultado = parseFloat(this.valor1) - parseFloat(this.valor2); 
+    
+        otrosValores.forEach((elementos)=>{
+            resultado -= parseFloat(this.otrosValores);
+        });
+    
+        return resultado;
+    }
+    
+    Multiplicacion(){
+        let resultado=parseFloat(this.valor1) * parseFloat(this.valor2); 
+    
+        otrosValores.forEach((elementos)=>{
+            resultado *= parseFloat(this.otrosValores);
+        });
+    
+        return resultado;
+    }
+    
+    Division(){
+    
+        let resultado=parseFloat(this.valor1) / parseFloat(this.valor2); 
+    
+        otrosValores.forEach(()=>{
+            resultado /= parseFloat(this.otrosValores);
+        });
+    
+     return resultado;
+    
+    }
+    
+    Modulo(){
+    
+        return parseFloat(this.valor1) % parseFloat(this.valor2);
+    
+    }
+    
+    Porcientos(valor1=0,valor2=0){
+    
+        return parseFloat(this.valor1) * (parseInt(this.valor2) / 100);
+    
+    }
 }
