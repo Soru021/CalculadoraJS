@@ -7,11 +7,14 @@
     cursor: pointer;
     outline: none;
     border-radius: 25px;
-    border: 2px solid black;
-    background-image: radial-gradient(circle at 29.74% 6.56%, #ffdcf5 0, #ffcfef 16.67%, #ffbde6 33.33%, #f3a7d9 50%, #dc92cd 66.67%, #c882c6 83.33%, #b679c3 100%);
+    border: 1px solid white;
+    box-shadow: 0.5vh 0.5vh rgba(255,0,0, 0.7);
+    transition: linear 1s;
+    background-color:rgba(255,0,0, 0.7);
 }
 
 .Botones:hover{
     background-image: radial-gradient(circle at 50% 50%, #80eaa9 0, #69e3a7 16.67%, #4adaa4 33.33%, #00cf9f 50%, #00c49b 66.67%, #00bb9a 83.33%, #00b39b 100%);
+    box-shadow: 1vh 1vh teal;
 }
 

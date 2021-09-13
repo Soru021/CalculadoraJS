@@ -4,6 +4,7 @@
     margin: 0px;
     padding: 0px;
 }
+
 .Calculadora{
     background-color: rgba(142, 68, 173, 1);
 }
@@ -15,6 +16,7 @@
     width: 59vh;
     height: 80vh;
     margin: auto;
+    border: 3px solid black;
     top: 0;
     bottom: 0;
     left: 0;
@@ -29,6 +31,7 @@
     margin: 1vh;
     border-radius: 10px;
     border: 2px solid black;
+    box-shadow: 3px 3px 3px 3px rgba(191, 191, 191, 1);
     outline: none;
     text-align: right;
     font-size: 20px;
@@ -44,13 +47,4 @@
     width: 54vh;
     float: left;
     border-radius: 40px;
-}
-
-.Calculadora .Fondo .Operadores{
-    position: relative;
-    background: transparent;
-    float: right;
-    width: 12vh;
-    height: auto;
-    margin: 1vh;
 }
