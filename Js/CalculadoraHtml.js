@@ -1,25 +1,47 @@
 let ope='';
+let Localidad="en-US";
 
 const pi=3.1415926535897932384626433832795;
-const e=2.7182818284590452353602874713527;
+
+document.addEventListener('DOMContentLoaded',()=>{
+    let display=document.getElementById('_display');
+  
+    display.setAttribute('readonly',true);
+    display.value=0;
+});
 
 function Clear(){
   let boton=document.getElementById('_display');
-  boton.value='';
-  boton.focus();
+  boton.value=0;
+}
+
+function Quitar(){
+    let display=Array.from(document.getElementById('_display').value);
+    let letra="";
+
+    for(let i=0; i < display.length - 1; i++ ){
+        letra +=display[i];
+    }
+
+    if (letra.length === 0)
+        letra=0;
+
+    document.getElementById('_display').value=letra;
+
 }
 
 function ObtenerValor(elementos){
 
     let display = document.getElementById('_display');
 
-    if ( !Number.parseFloat(elementos.value))
+    if ( !Number.parseFloat(elementos.value) && Number.parseFloat(elementos.value) !==0 && elementos.value !== '.')
         ope=elementos.value;
 
         if (elementos.value==='pi')
         elementos.value=pi;
-        else if(elementos.value==='e')
-        elementos.value=e;
+
+        if (display.value == 0)
+        display.value='';
 
         display.value +=elementos.value;
 }
@@ -37,16 +59,19 @@ function Resultado(){
         case '-':
             total=datos.Resta();
             break;
-        case 'x':
+        case 'x' || '*':
             total=datos.Multiplicacion();
             break;
         case '/':
             total=datos.Division();
             break;
+        case '%':
+            total=datos.Porcientos();
+            break;
         default:
             break;
     }
 
-  document.getElementById('_display').value=total;
+  document.getElementById('_display').value=total.toLocaleString(Localidad);
 
 }

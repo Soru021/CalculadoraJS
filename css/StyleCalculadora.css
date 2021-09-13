@@ -1,5 +1,9 @@
 @import url(Componentes.css);
 
+*{
+    margin: 0px;
+    padding: 0px;
+}
 .Calculadora{
     background-color: rgba(142, 68, 173, 1);
 }
@@ -9,10 +13,13 @@
     background-color: rgba(191, 85, 236, 0.5);
     padding: 10px;
     width: 59vh;
-    height: auto;
+    height: 80vh;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
-
-
 
 .Calculadora .Fondo .Display{
     position: relative;

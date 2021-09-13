@@ -1,6 +1,6 @@
 .Botones{
-    width: 9vh;
-    height: 9vh;
+    width: 8.5vh;
+    height: 8.5vh;
     margin: 2vh;
     font-size: 20px;
     font-weight: bold;
@@ -14,3 +14,4 @@
 .Botones:hover{
     background-image: radial-gradient(circle at 50% 50%, #80eaa9 0, #69e3a7 16.67%, #4adaa4 33.33%, #00cf9f 50%, #00c49b 66.67%, #00bb9a 83.33%, #00b39b 100%);
 }
+

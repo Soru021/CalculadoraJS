@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/StyleCalculadora.css">
     <script src="Js/Calculos.js"></script>
@@ -14,21 +13,19 @@
 </head>
 <body class="Calculadora">
 
-    <div class="Calculadora Fondo">
+    <div id="_Calculadora" class="Calculadora Fondo">
             
-        <input class="Calculadora Fondo Display" type="text" name="display" id="_display" />
+        <label for="_display"><input class="Calculadora Fondo Display" type="text" name="display" id="_display" /></label>
 
           <div class="Calculadora Fondo Boton">
             <button class="Botones" value="pi"onclick="ObtenerValor(this)">π</button>
-            <button class="Botones" value="e" onclick="ObtenerValor(this)">e</button>
+            <button class="Botones" value="BackSpace" onclick="Quitar(this)">&#8592</button>
             <button class="Botones" value="C" onclick="Clear()">C</button>
             <button class="Botones" value="+" onclick="ObtenerValor(this)">+</button>
-
             <button class="Botones" value="7" onclick="ObtenerValor(this)">7</button>
             <button class="Botones" value="8" onclick="ObtenerValor(this)">8</button>
             <button class="Botones" value="9" onclick="ObtenerValor(this)">9</button>
             <button class="Botones" value="-" onclick="ObtenerValor(this)">-</button>
-
             <button class="Botones" value="4" onclick="ObtenerValor(this)">4</button>
             <button class="Botones" value="5" onclick="ObtenerValor(this)">5</button>
             <button class="Botones" value="6" onclick="ObtenerValor(this)">6</button>
