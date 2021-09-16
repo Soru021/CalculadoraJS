@@ -37,8 +37,8 @@ function ObtenerValor(elementos){
     if ( !Number.parseFloat(elementos.value) && Number.parseFloat(elementos.value) !==0 && elementos.value !== '.')
         ope=elementos.value;
 
-        if (elementos.value==='pi')
-        elementos.value=pi;
+        if (elementos.value === 'pi')
+        elementos.value = pi;
 
         if (display.value == 0)
         display.value='';
@@ -49,6 +49,8 @@ function ObtenerValor(elementos){
 function Resultado(){
     let result= document.getElementById('_display').value.split(`${ope}`);
     let total=0;
+
+    console.log(result);
 
     let datos= new Operaciones(result[0],result[1]);
 

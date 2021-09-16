@@ -12,7 +12,7 @@ class Operaciones{
         let resultado=parseFloat(this.valor1) + parseFloat(this.valor2); 
     
         this.otrosValores.forEach((elementos)=>{
-            resultado += parseFloat(this.otrosValores);
+            resultado += parseFloat(elementos);
         });
     
         return resultado;
@@ -22,7 +22,7 @@ class Operaciones{
         let resultado = parseFloat(this.valor1) - parseFloat(this.valor2); 
     
         this.otrosValores.forEach((elementos)=>{
-            resultado -= parseFloat(this.otrosValores);
+            resultado -= parseFloat(elementos);
         });
     
         return resultado;
@@ -32,7 +32,7 @@ class Operaciones{
         let resultado=parseFloat(this.valor1) * parseFloat(this.valor2); 
     
         this.otrosValores.forEach((elementos)=>{
-            resultado *= parseFloat(this.otrosValores);
+            resultado *= parseFloat(elementos);
         });
     
         return resultado;
@@ -44,7 +44,7 @@ class Operaciones{
         if (this.valor2 != 0){
 
             this.otrosValores.forEach(()=>{
-                resultado /= parseFloat(this.otrosValores);
+                resultado /= parseFloat(elementos);
             });
             
         }else resultado=0
