@@ -10,7 +10,7 @@ class Operaciones{
     Suma(){
 
         let resultado=parseFloat(this.valor1) + parseFloat(this.valor2); 
-    
+
         this.otrosValores.forEach((elementos)=>{
             resultado += parseFloat(elementos);
         });
@@ -57,7 +57,7 @@ class Operaciones{
     Modulo(){
     
         return parseFloat(this.valor1) % parseFloat(this.valor2);
-    
+
     }
     
     Porcientos(){

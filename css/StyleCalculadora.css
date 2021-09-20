@@ -13,7 +13,7 @@
     position: absolute;
     background-color: rgba(191, 85, 236, 1);
     padding: 10px;
-    width: 59vh;
+    width: 61vh;
     height: 80vh;
     margin: auto;
     border: 3px solid black;
@@ -27,7 +27,7 @@
 .Calculadora .Fondo .Display{
     position: relative;
     background-color: white;
-    width: 53vh;
+    width: 55vh;
     height: 5vh;
     margin: 1vh;
     border-radius: 10px;
@@ -45,7 +45,7 @@
     background-color:rgba(159, 90, 253, 0.5);
     margin: 1vh;
     height: auto;
-    width: 54vh;
+    width: 55vh;
     float: left;
     border-radius: 40px;
 }
