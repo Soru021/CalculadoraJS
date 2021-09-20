@@ -35,20 +35,20 @@ function ObtenerValor(elementos){
 
     let display = document.getElementById('_display');
 
-    if ( !Number.parseFloat(elementos.value) && Number.parseFloat(elementos.value) !==0 && elementos.value !== '.')
-        {
-            ope=elementos.value;
-            numero1=display.value.replace(',','').split(ope);
-            display.value='';
-        }
+        if ( !Number.parseFloat(elementos.value) && Number.parseFloat(elementos.value) !==0 && elementos.value !== '.')
+            {
+                ope=elementos.value;
+                numero1=display.value.replace(',','').split(ope);
+                display.value='';
+            }
 
         if (elementos.value === 'pi')
             elementos.value = pi;
 
-        if (display.value == 0 && elementos.value !== '.')
-            display.value='';
+        if (display.value == 0 && display.value !== '.' && display.value !=='0.' )
+            display.value = '';
 
-            display.value +=elementos.value;
+            display.value += elementos.value;
 }
 
 function Resultado(){
