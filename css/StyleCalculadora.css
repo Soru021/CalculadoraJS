@@ -9,6 +9,8 @@
     background-color: rgba(228, 241, 254, 1);
 }
 
+
+
 .Calculadora .Fondo{
     position: absolute;
     background-color: rgba(191, 85, 236, 1);
@@ -49,4 +51,8 @@
     width: 55vh;
     float: left;
     border-radius: 40px;
+}
+
+.Calculadora .Fondo:hover{
+    cursor: move;
 }

@@ -15,15 +15,17 @@ document.addEventListener('DOMContentLoaded',()=>{
     _Calculadora.onmousedown = (event)=>{
         _Calculadora.style.position = 'absolute';
         _Calculadora.style.zIndex = 1000;
-  
-        document.body.append(_Calculadora);
+
+        //document.body.append(_Calculadora);
   
         function moveAt(pageX, pageY){
           _Calculadora.style.left = pageX - _Calculadora.offsetWidth / 2 + 'px';
           _Calculadora.style.top = pageY - _Calculadora.offsetHeight / 2 + 'px';
+         
         }
   
-        moveAt(event.pageX, event.pageY);
+        //Mueve todo el div directamente 
+       // moveAt(event.pageX, event.pageY);
   
         function onMouseMove(event){
           moveAt(event.pageX,event.pageY);
@@ -35,6 +37,7 @@ document.addEventListener('DOMContentLoaded',()=>{
           document.removeEventListener('mousemove',onMouseMove);
           _Calculadora.onmouseup = null;
         } 
+
       }
   
       _Calculadora.ondragstart = ()=>{
@@ -69,7 +72,12 @@ function ObtenerValor(elementos){
         if ( !Number.parseFloat(elementos.value) && Number.parseFloat(elementos.value) !==0 && elementos.value !== '.')
             {
                 ope=elementos.value;
-                numero1=display.value.replace(',','').split(ope);
+
+                    if (display.value.replace(',','').split(ope) != 0)
+                    {
+                        numero1 = display.value.replace(',','').split(ope);
+                    }
+                    
                 display.value='';
             }
 
