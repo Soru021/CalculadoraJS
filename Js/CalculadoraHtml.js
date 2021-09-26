@@ -9,6 +9,37 @@ document.addEventListener('DOMContentLoaded',()=>{
   
     display.setAttribute('readonly',true);
     display.value=0;
+
+//Mover el div de calculadora
+
+    _Calculadora.onmousedown = (event)=>{
+        _Calculadora.style.position = 'absolute';
+        _Calculadora.style.zIndex = 1000;
+  
+        document.body.append(_Calculadora);
+  
+        function moveAt(pageX, pageY){
+          _Calculadora.style.left = pageX - _Calculadora.offsetWidth / 2 + 'px';
+          _Calculadora.style.top = pageY - _Calculadora.offsetHeight / 2 + 'px';
+        }
+  
+        moveAt(event.pageX, event.pageY);
+  
+        function onMouseMove(event){
+          moveAt(event.pageX,event.pageY);
+        }
+  
+        document.addEventListener('mousemove',onMouseMove);
+  
+        _Calculadora.onmouseup = ()=>{
+          document.removeEventListener('mousemove',onMouseMove);
+          _Calculadora.onmouseup = null;
+        } 
+      }
+  
+      _Calculadora.ondragstart = ()=>{
+        return false;
+      }
 });
 
 function Clear(){
