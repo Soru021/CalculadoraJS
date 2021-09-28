@@ -54,7 +54,7 @@ function handleCellPlayed(clickCell, clickIndex){
 function handlePlayerChange(){
 
   currentPlayer = currentPlayer === "X" ? "O" : "X";
-  statusDisplay.innerHTML = currentPlayerTurn();
+//  statusDisplay.innerHTML = currentPlayerTurn();
 
 }
 
@@ -90,6 +90,7 @@ function handleResultValidation(){
 
   if (roundwon){
     statusDisplay.innerHTML=winningMessage();
+    document.querySelector('.mensage').classList.remove('Mostrar');
     gameActive=false;
     return;
   }
@@ -98,6 +99,7 @@ function handleResultValidation(){
 
   if (roundDraw){
     statusDisplay.innerHTML = drawMessage();
+    document.querySelector('.mensage').classList.remove('Mostrar');
     gameState=false;
     return;
   }
@@ -115,7 +117,6 @@ function handleCellClick(clickedCellEvent){
     return;
   }
 
-
   handleCellPlayed(click,clickIndex);
   handleResultValidation();
 
@@ -127,6 +128,7 @@ function handleRestartGame(){
   gameState = ["","","","","","","","","",];
   statusDisplay.innerHTML = currentPlayerTurn();
   document.querySelectorAll('.linea1').forEach(linea => linea.innerHTML="");
+  document.querySelector('.mensage').classList.add('mensage','Mostrar');
 }
 
 document.querySelectorAll('.linea1').forEach(linea => linea.addEventListener('click',handleCellClick));
