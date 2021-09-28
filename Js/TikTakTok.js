@@ -90,7 +90,7 @@ function handleResultValidation(){
 
   if (roundwon){
     statusDisplay.innerHTML=winningMessage();
-    gameActive=true;
+    gameActive=false;
     return;
   }
 
@@ -114,6 +114,7 @@ function handleCellClick(clickedCellEvent){
   if (gameState[clickIndex] !== "" || !gameActive){
     return;
   }
+
 
   handleCellPlayed(click,clickIndex);
   handleResultValidation();
