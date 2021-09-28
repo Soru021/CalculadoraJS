@@ -1,0 +1,54 @@
+.TikTakTok-Fondo{
+    position: absolute;
+    height: 85vh;
+    width: 75vh;
+    top: 10vh;
+    right: 50vh;
+    background-color: rgb(255, 203, 5);
+    border-radius: 50px;
+}
+
+.TikTakTok-Titulo{
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    margin: 2vh;
+    padding: 2vh;
+}
+
+.TikTakTok{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    border: 2px solid rgb(252, 214, 112);
+    box-shadow: 3px 3px 3px 3px rgb(252, 214, 112);
+    height: 50vh;
+    width: 50vh;
+    padding: 5vh;
+    background-color: rgb(252, 214, 112);
+    left: 7vh;
+}
+
+.linea1{
+    position: relative;
+    width: 16.3vh;
+    height: 16.3vh;
+    box-shadow: 0 0 0 1px black;
+    border: 1px solid black;
+    line-height: 16.3vh;
+    cursor: pointer;
+}
+
+.game-restart{
+    position: relative;
+    background-color: rgb(83, 51, 237);
+    left: 34%;
+    padding: 2vh;
+    margin: 3vh;
+    cursor: pointer;
+    
+}
+
+.game-restart:hover{
+    background-color: rgb(0, 181, 204);
+}
