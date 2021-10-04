@@ -41,14 +41,42 @@ let gameActive=true;
 let currentPlayer = "X";
 let gameState = ["","","","","","","","","",];
 const winningMessage = ()=> `Player ${currentPlayer}`;
-const drawMessage = ()=> `Game ended in a draw`;
+const drawMessage = ()=> `Empate`;
 const currentPlayerTurn =()=> `It's ${currentPlayer} 's turn`;
 
 statusDisplay.innerHTML = currentPlayerTurn();
 
+function GenerarRandom(){
+  return Math.floor((Math.random() * (8 - 0 + 1)) + 0);
+}
+
 function handleCellPlayed(clickCell, clickIndex){
+
+  currentPlayer= "X";
   gameState[clickIndex]=currentPlayer;
   clickCell.innerHTML = currentPlayer;
+
+
+  handleResultValidation();
+
+
+  let posicion = 0;
+  let numero = 9;
+
+  while(numero > 0){
+    posicion = GenerarRandom();
+     if (gameState[posicion] == "")
+     {
+       break;
+     }
+     numero--;
+  }
+
+  console.log(posicion)
+  currentPlayer = "O";
+  gameState[posicion] = currentPlayer;
+  document.querySelector(`[data-cell-index="${posicion}"]`).innerHTML = currentPlayer
+
 }
 
 function handlePlayerChange(){
@@ -74,6 +102,7 @@ function handleResultValidation(){
 
   for( let i=0; i<7; i++){
     const winningCondition = winningConditions[i];
+
     let a = gameState[winningCondition[0]];
     let b = gameState[winningCondition[1]];
     let c = gameState[winningCondition[2]];
@@ -104,8 +133,6 @@ function handleResultValidation(){
     return;
   }
 
-  handlePlayerChange();
-
 }
 
 function handleCellClick(clickedCellEvent){
@@ -113,13 +140,12 @@ function handleCellClick(clickedCellEvent){
 
   const clickIndex=parseInt(click.getAttribute('data-cell-index'));
 
+
   if (gameState[clickIndex] !== "" || !gameActive){
     return;
   }
 
   handleCellPlayed(click,clickIndex);
-  handleResultValidation();
-
 }
 
 function handleRestartGame(){
